@@ -12,10 +12,8 @@ RUN conda update --name base conda -y && \
     conda clean -a -y && \
     rm -f /tmp/environment.yml
 
-USER root
-
-RUN apt update && apt install git curl jq -y
-
+#USER root
+#RUN apt update && apt install git curl jq -y
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
@@ -30,6 +28,6 @@ ENV HOME /home/${NB_USER}
 
 # Make sure the contents of our repo are in ${HOME}
 #COPY . ${HOME}
-#USER root
+USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
