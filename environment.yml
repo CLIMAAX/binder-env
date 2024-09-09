@@ -22,6 +22,7 @@ dependencies:
     - ipykernel=6.29.5
     - ipyleaflet=0.19.1
     - ipympl=0.9.4
+    - ipython=8.27.0
     - ipywidgets=8.1.3
     - jenkspy=0.4.1
     - jupyter-resource-usage=1.0.2
@@ -31,6 +32,7 @@ dependencies:
     - jupyterlab=4.2.3
     - localtileserver=0.10.3
     - matplotlib=3.8.4
+    - mplleaflet=0.0.5
     - nbgitpuller=1.2.1
     - netcdf4=1.7.1
     - notebook=7.2.1
@@ -49,6 +51,7 @@ dependencies:
     - pyogrio=0.8.0
     - pyproj=3.6.1
     - pystac-client=0.8.2
+    - pytest=8.3.2
     - python-kaleido=0.2.1
     - python=3.11
     - pyyaml=6.0.1
@@ -69,3 +72,4 @@ dependencies:
     - xlrd=2.0.1
     - pip:
         - damagescanner==0.7
+        - paretoset==1.2.4
