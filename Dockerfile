@@ -3,9 +3,8 @@ FROM quay.io/jupyter/minimal-notebook:python-3.11 AS base
 COPY --chown=jovyan:users environment.yml /tmp/environment.yml
 # Install conda packages directly into the base environment. The base environment
 # of the jupyter image brings Python 3.11, same as our climaax conda environment.
-RUN conda update --name base conda -y && \
-    conda env update -n base -f /tmp/environment.yml && \
-    conda clean -a -y && \
+RUN mamba env update -n base -f /tmp/environment.yml && \
+    mamba clean -a -y && \
     rm -f /tmp/environment.yml
 
 # https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
