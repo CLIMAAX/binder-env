@@ -1,4 +1,4 @@
-FROM quay.io/jupyter/minimal-notebook:lab-4.2.4 AS base
+FROM quay.io/jupyter/minimal-notebook:python-3.11 AS base
 
 COPY --chown=jovyan:users environment.yml /tmp/environment.yml
 # Install conda packages directly into the base environment. The base environment
