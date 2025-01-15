@@ -9,5 +9,12 @@ Use [this form](https://nbgitpuller.readthedocs.io/en/latest/link.html?tab=binde
 
 ## Notes
 
-- We start from a custom Dockerfile based on an [image](https://github.com/jupyter/docker-stacks/blob/main/images/minimal-notebook/Dockerfile) that starts with Python 3.11 (CLIMAAX default), because the [default base environment](https://github.com/jupyterhub/repo2docker/blob/HEAD/repo2docker/buildpacks/conda/environment.yml) of binder uses Python 3.10 (as of July 2024).
-- The environment specified here must be kept in sync with the reference environment from the [workflow_template](https://github.com/CLIMAAX/workflow_template/blob/main/environment.yml).
+- Due to issues with our environment not building in time on the binder infrastructure, we build the container ourselves and and only pull the image from dockerhub.
+- The Dockerfile for the image as well as the Python environment specification live on the `image` branch.
+- To update the environment, make the required edits on the `image` branch, run
+
+      docker build --platform linux/amd64 -t cpolster/climaax-binder:YYYY.MM.V
+
+  and push to Dockerhub.
+  Then update the tag in the Dockerfile on the main branch.
+- The Python environment is based on the reference environment from the [workflow_template](https://github.com/CLIMAAX/workflow_template/blob/main/environment.yml).
