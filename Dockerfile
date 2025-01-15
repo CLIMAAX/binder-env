@@ -1,1 +1,1 @@
-FROM cpolster/climaax-binder:2024.12.0
+FROM cpolster/climaax-binder:2025.01.1
