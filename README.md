@@ -13,7 +13,7 @@ Use [this form](https://nbgitpuller.readthedocs.io/en/latest/link.html?tab=binde
 - The Dockerfile for the image as well as the Python environment specification live on the `image` branch.
 - To update the environment, make the required edits on the `image` branch, run
 
-      docker build --platform linux/amd64 -t cpolster/climaax-binder:YYYY.MM.V
+      docker build --platform linux/amd64 -t cpolster/climaax-binder:YYYY.MM.V .
 
   and push to Dockerhub.
   Then update the tag in the Dockerfile on the main branch.
