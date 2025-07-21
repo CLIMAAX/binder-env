@@ -1,1 +1,1 @@
-FROM cpolster/climaax-binder:2025.07.0
+FROM ghcr.io/climaax/binder-env:v2025.07.0
