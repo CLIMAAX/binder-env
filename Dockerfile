@@ -1,1 +1,1 @@
-FROM ghcr.io/climaax/binder-env:v2026.03.0
+FROM ghcr.io/climaax/binder-env:v2026.04.0
