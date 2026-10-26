@@ -14,6 +14,7 @@ dependencies:
     - branca=0.8.1
     - cartopy=0.23.0
     - cdsapi=0.7.7
+    - certifi>=2026.10.19
     - cfgrib=0.9.14.0
     - contextily=1.6.0
     - dask-labextension=7.0.0
@@ -51,7 +52,7 @@ dependencies:
     - osmnx=1.9.3
     - p7zip=16.02
     - pandas=2.2.2
-    - pip
+    - pip>=26.2.2
     - planetary-computer=1.0.0
     - plotly=5.22.0
     - pooch=1.9.0
