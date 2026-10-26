@@ -8,8 +8,9 @@ COPY --chown=jovyan:users environment.yml /tmp/environment.yml
 # Install conda packages directly into the base environment. The base environment
 # of the jupyter image brings Python 3.12 (as of April 2025), same as our climaax
 # conda environment.
-RUN mamba env update -n base -f /tmp/environment.yml && \
-    mamba clean -a -y && \
+RUN conda update -n base -c conda-forge conda && \
+    conda env update -n base -f /tmp/environment.yml && \
+    conda clean -a -y && \
     pip cache purge && \
     rm -f /tmp/environment.yml
 
